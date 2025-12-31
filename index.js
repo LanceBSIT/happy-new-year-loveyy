@@ -53,11 +53,7 @@ function main() {
 }
 
 function slide() {
-  const images = [
-    "Images/bgmain.jpg",
-    "Images/home2.jpg",
-    "Images/home3 (2).jpg",
-  ];
+  const images = ["images/bgmain.jpg", "images/home2.jpg", "images/home3.jpg"];
 
   let index = 0;
 
