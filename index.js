@@ -97,3 +97,25 @@ function slide() {
 }
 
 slide();
+
+// JS-only smooth scrolling for navbar (fix white flash)
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // ⛔ stop native jump
+    e.stopImmediatePropagation(); // ⛔ stop other handlers
+
+    const targetId = this.getAttribute("href");
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
+    const y = target.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+
+    // ⛔ prevent URL hash repaint (important)
+    history.pushState(null, "", " ");
+  });
+});
