@@ -97,3 +97,44 @@ function slide() {
 }
 
 slide();
+
+// Make sure scrolling is enabled when main content is visible
+function enableScroll() {
+  document.body.classList.remove("no-scroll");
+  document.body.classList.add("allow-scroll");
+}
+
+// Your existing main() hook – keep name the same
+function main() {
+  document.getElementById("login").style.display = "none";
+  document.getElementById("content").style.display = "none";
+
+  const mainContent = document.getElementById("mainContent");
+  mainContent.style.display = "block";
+
+  enableScroll();
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// JS-only automatic smooth scrolling for nav links
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const targetId = link.getAttribute("href");
+      const targetEl = document.querySelector(targetId);
+
+      if (!targetEl) return;
+
+      const targetPosition =
+        targetEl.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    });
+  });
+});
