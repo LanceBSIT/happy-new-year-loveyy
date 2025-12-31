@@ -50,6 +50,9 @@ function hidePopUp() {
 function main() {
   document.getElementById("content").style.display = "none";
   document.getElementById("mainContent").style.display = "block";
+
+  document.body.classList.remove("no-scroll");
+  document.body.classList.add("allow-scroll");
 }
 
 function slide() {

@@ -1,15 +1,19 @@
-html,
 body {
   margin: 0;
-  padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden; /* 👈 always show scrollbar */
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+body.allow-scroll {
+  overflow-y: auto;
 }
 
 #mainContent {
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100vh;
+  height: auto;
+  overflow: visible;
   scroll-behavior: smooth;
 }
 
@@ -67,7 +71,7 @@ body {
   padding: 5px;
   margin-bottom: 80px;
   background-color: rgb(226, 123, 140);
-  margin-top: -60px;
+  padding-top: 15px;
   width: 100%;
 }
 
@@ -107,10 +111,6 @@ body {
   cursor: pointer;
   transform: scale(1.1);
   color: white;
-}
-
-#mainContent {
-  overflow-y: scroll;
 }
 
 #mainContent::-webkit-scrollbar {
