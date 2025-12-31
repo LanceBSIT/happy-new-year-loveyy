@@ -1,0 +1,53 @@
+#introScreen {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  height: 100vh; /* full viewport height */
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 120px;
+  letter-spacing: 5px;
+  word-spacing: 2px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#hiddenText {
+  display: none; /* will be shown via JS */
+  position: absolute; /* position over the page */
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%, -5%);
+  z-index: 2;
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 120px; /* adjust as needed */
+  color: white; /* visible over image */
+  text-align: center;
+}
+
+.intro-text {
+  animation: fadeIn 2s ease;
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}

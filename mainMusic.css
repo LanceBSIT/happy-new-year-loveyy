@@ -1,0 +1,184 @@
+.music-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.music-title,
+.playlist-title {
+  text-align: center;
+  color: white;
+}
+
+.music {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.player {
+  width: 500px;
+  height: 700px;
+  background: rgba(103, 95, 105, 0.6);
+  border-radius: 5px;
+  padding-top: 5px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.cover {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.small-cover {
+  display: flex;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-left: 48.5px;
+  margin-top: 15px;
+}
+
+.small-cover,
+.cover {
+  border-radius: 10px;
+}
+
+.artist {
+  justify-content: left;
+  padding-left: 10px;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.info-row {
+  display: flex;
+}
+
+.song-title {
+  font-size: 30px;
+  margin-bottom: -12px;
+}
+
+.song-artist {
+  font-size: 20px;
+}
+
+.controls {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.progress {
+  flex: 1;
+  height: 4px;
+  appearance: none;
+  background: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #eb6ccf;
+  border-radius: 50%;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: center; /* ✅ centers everything */
+  gap: 8px;
+  margin: 20px auto 0; /* ✅ centers the container */
+  width: 70%;
+  color: white;
+  margin-top: 2px;
+}
+
+.controls button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  font-size: 40px;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  color: rgb(221, 218, 218);
+}
+
+/*Playlist*/
+
+.playlist {
+  width: 500px;
+  height: 700px;
+  background: rgba(103, 95, 105, 0.6);
+  border-radius: 5px;
+  padding-top: 5px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.playlist-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  width: 480px;
+  height: 77px;
+  margin-left: 10px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.choices:hover {
+  transform: scale(1.1);
+}
+
+.choices:hover {
+  background: rgba(101, 97, 102, 0.6);
+  cursor: pointer;
+}
+
+.dot {
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  margin-left: 7px;
+  border: none;
+  font-size: 20px;
+  background: none;
+}
+
+.dot:hover {
+  cursor: pointer;
+}
+
+.info {
+  justify-content: left;
+  padding-left: 10px;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.title-name {
+  font-size: 27px;
+}
+
+.song-name {
+  font-size: 19px;
+  margin-top: -20px;
+}

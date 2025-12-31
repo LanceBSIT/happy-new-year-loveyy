@@ -1,0 +1,166 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden; /* 👈 always show scrollbar */
+}
+
+#mainContent {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/*Home screen*/
+
+.container1 {
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+  background-color: rgb(189, 70, 70);
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 5px;
+  word-spacing: 7px;
+  font-size: 60px;
+  text-decoration-thickness: bold;
+  margin-bottom: 10px;
+}
+
+.headerHome {
+  word-spacing: 2px;
+}
+
+/*background*/
+
+.mainbg {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+/*Home content*/
+.page {
+  letter-spacing: 4px;
+  word-spacing: 60px;
+  font-size: 25px;
+  font-family: Lucida Console;
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  margin-bottom: 80px;
+  background-color: rgb(226, 123, 140);
+  margin-top: -60px;
+  width: 100%;
+}
+
+.page-container {
+  text-align: center;
+}
+
+.pageCont {
+  display: inline-block;
+  background-color: rgba(245, 245, 220, 0);
+  color: black;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 5px;
+  transition: transform 0.3s ease;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.pageCont:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+}
+
+.pageActive {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 5px;
+  transition: transform 0.3s ease;
+  transition: color 0.2s ease;
+}
+
+.pageActive:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+}
+
+#mainContent {
+  overflow-y: scroll;
+}
+
+#mainContent::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* scrollbar track */
+#mainContent::-webkit-scrollbar-track {
+  background: #f58bae;
+}
+
+/* scrollbar thumb */
+#mainContent::-webkit-scrollbar-thumb {
+  background: rgb(247, 42, 168);
+  border-radius: 20px;
+  border: 2px solid #f18989;
+}
+
+/* hover */
+#mainContent::-webkit-scrollbar-thumb:hover {
+  background: rgb(200, 90, 120);
+}
+
+.contentHome {
+  text-align: center;
+  font-family: avanta Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 28px;
+  margin-bottom: -10px;
+}
+
+#mainHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 👈 centers slider horizontally */
+}
+
+.slider-container {
+  width: 900px;
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+
+  margin: 0;
+}
+
+.slideImg {
+  position: absolute;
+  width: 900px;
+  height: 550px;
+  top: 0;
+  left: 0;
+  transition: left 1s ease;
+}

@@ -1,0 +1,167 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* disables scrolling */
+  height: 100%;
+}
+
+.new_year {
+  position: fixed;
+  bottom: 0; /* bottom prioritized */
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("Images/SUNSET_BIG_VID.gif");
+  background-size: cover; /* fills screen completely */
+  background-position: bottom center; /* bottom visible, crop top */
+  background-repeat: no-repeat;
+  z-index: -1; /* behind content */
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.content-wrapper {
+  position: relative;
+}
+
+.content1 {
+  position: absolute;
+  transform: translate(-50%, -50%) translateY(20px);
+  justify-content: center;
+  align-items: center;
+  left: 50px;
+  top: 40px;
+
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  background: rgba(226, 208, 208, 0.2); /* semi-transparent white */
+  border: none;
+  border-radius: 15px; /* round edges */
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  animation: moveContent 4s ease-in-out infinite;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.content2 {
+  position: absolute;
+  transform: translate(-50%, -50%) translateY(20px);
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+  top: 30px;
+
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+  letter-spacing: 3px;
+  word-spacing: 4px;
+  background: rgba(226, 208, 208, 0.2); /* semi-transparent white */
+  border: none;
+  border-radius: 15px; /* round edges */
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  animation: moveContent 4s ease-in-out infinite;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.content1,
+.content2 {
+  font-size: 15px;
+}
+
+.content2 {
+  position: relative;
+}
+
+.content1.active,
+.content2.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+  pointer-events: auto;
+}
+
+@keyframes moveContent {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.pop-up {
+  position: fixed; /* stay on screen even when scrolling */
+  font-family: "Lucida Handwriting", cursive;
+  word-spacing: 4px;
+  letter-spacing: 3px;
+  font-size: 20px;
+
+  background-color: #fffae6;
+  background: rgba(255, 248, 248, 0.2); /* semi-transparent white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px 50px;
+  border-radius: 10px;
+
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5); /* start small */
+  z-index: 9999; /* on top of everything */
+  animation: pop 0.5s forwards;
+  text-align: center;
+  top: 30%; /* center vertically */
+  left: 50%; /* center horizontally */
+}
+
+/* Pop-up animation */
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: black;
+  background-color: pink;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  cursor: pointer;
+  font-family: Lucida Console;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgb(230, 100, 121);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
